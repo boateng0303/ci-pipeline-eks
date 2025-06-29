@@ -13,7 +13,7 @@ module "eks" {
     vpc-cni                = {}
   }
 
-  # Optional
+  # Optionall
   cluster_endpoint_public_access = true
 
   # Optional: Adds the current caller identity as an administrator via cluster access entry
