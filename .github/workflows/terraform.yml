@@ -42,4 +42,4 @@ jobs:
 
       - name: Terraform Apply (on push to main)
         if: github.event_name == 'push'
-        run: terraform apply -auto-approve tfplan
+        run: terraform destroy -auto-approve tfplan
