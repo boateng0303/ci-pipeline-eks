@@ -1,12 +1,12 @@
-# name: Terraform AWS Provisioning
+name: Terraform AWS Provisioning
 
-# on:
-#   push:
-#     branches:
-#       - main
-#   pull_request:
-#     branches:
-#       - main
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
 
 jobs:
   terraform:
@@ -42,4 +42,4 @@ jobs:
 
       - name: Terraform Apply (on push to main)
         if: github.event_name == 'push'
-        run: terraform destroy -auto-approve 
+        run: terraform apply -auto-approve 
